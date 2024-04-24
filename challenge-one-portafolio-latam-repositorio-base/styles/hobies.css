@@ -1,0 +1,32 @@
+.hobbies {
+    margin:  110px;
+}
+
+.hobbies__title {
+    text-align: center;
+    margin: 2% 0;
+}
+
+.hobbies__line {
+    display: flex;
+    gap: 1%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.hobbies__box {
+    height: 200px;
+    width: 200px;
+    margin: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: left;
+    align-items: end;
+    box-shadow: 0 0 10px #ccc;
+
+}
+
+.hobbies__img img {
+    width: 25%;
+    filter: invert(100%) sepia(41%) saturate(3845%) hue-rotate(206deg) brightness(87%) contrast(85%);
+}

@@ -1,0 +1,16 @@
+.about {
+    background-color: rgba(227, 80, 190, 0.265);
+    padding: 50px 110px;
+}
+
+.about__container {
+    width: 70%;
+}
+
+.about__title {
+    font-size: 1.7em;
+}
+
+.about__paragraph {
+    font-size: 1.2em;
+}

@@ -1,0 +1,376 @@
+/*CSS Reset / Normalize*/
+
+/* archivos de cada seccion */
+@import url(styles/menu.css);
+@import url(styles/title.css);
+@import url(styles/about.css);
+@import url(styles/skills.css);
+@import url(styles/hobies.css);
+@import url(styles/formacionAcademica.css);
+@import url(styles/experience.css);
+@import url(styles/contacto.css);
+@import url(styles/footer.css);
+
+:root {
+    /* Inserta la variable de los otros colores inspeccionando el exemplo de figma */
+    /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
+    --cor-de-fundo: #F5F5F5;
+    --cor-de-link: #000;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--cor-de-fundo);
+    font-family: 'Raleway';
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+ol,
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--cor-de-link);
+}
+
+
+/* Estilos para el MODO OSCURO */
+.modo-oscuro,
+.modo-oscuro .title__network__item a,
+.modo-oscuro .menu__list__item a {
+    background-color: #000000;
+    color: #F5F5F5;
+}
+
+.modo-oscuro .hobbies__box,
+.modo-oscuro .skills__box {
+    /* background-color: rgba(47, 46, 46, 0.712); */
+    background-color: rgb(211, 217, 222);
+    color: black;
+    box-shadow: 0 0 10px #4e4c4c;
+}
+
+.modo-oscuro .academic__courses__item__img {
+    background-color: rgb(211, 217, 222);
+}
+
+/* botones de la categoria experiencia */
+.modo-oscuro .experience__demo a button {
+    color: azure;
+}
+
+.modo-oscuro .skills__img img,
+.modo-oscuro .hobbies__img img {
+    filter: invert(9%) sepia(29%) saturate(2854%) hue-rotate(207deg) brightness(92%) contrast(106%);
+}
+
+.modo-oscuro .about,
+.modo-oscuro .academic,
+.modo-oscuro .formcontato {
+    background-color: rgb(4, 4, 39);
+}
+
+/* 
+.modo-oscuro .menu__list__item:not(:first-child) a  {
+    padding: 10px;
+    
+} */
+
+.modo-oscuro .menu__list__item:not(:first-child) a:hover {
+    border-radius: 4px;
+    background-color: rgb(11, 11, 75);
+}
+
+.modo-oscuro .menu__list a:hover {
+    background-color: rgb(35, 36, 123);
+}
+
+.modo-oscuro {
+    --background-color: #000000;
+}
+
+/* modo oscuro para los botones */
+.modo-oscuro .experience__repo a button {
+    border: solid 2px rgba(5, 9, 51, 0.959);
+    color: rgba(5, 9, 51, 0.959);
+}
+
+.modo-oscuro .formcontato__botao,
+.modo-oscuro .experience__demo a button {
+    background-color: rgba(5, 9, 51, 0.959);
+    color: #F5F5F5;
+    border: none;
+}
+
+
+/*Tablet*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    /* Menú */
+
+    .menu {
+        padding: 0 40px;
+    }
+
+    .menu__list__item:not(:last-child) {
+        display: none;
+    }
+
+    /*title*/
+    .title__div {
+        padding: 0 40px;
+    }
+
+    .title__bio {
+        font-size: 2.5em;
+    }
+
+    .title__subsection {
+        font-size: 1.2em;
+        font-weight: lighter;
+    }
+
+    .title__network {
+        justify-content: space-between;
+        padding: 0;
+        width: 80%;
+    }
+
+    /* about */
+    .about {
+        padding: 40px;
+    }
+
+    .about__container {
+        width: 100%;
+    }
+
+    /*Skills*/
+    .skills {
+        margin: 40px;
+    }
+
+    .skills__line {
+        gap: 0;
+    }
+
+    .skills__box {
+        height: 150px;
+        margin: 10px 0;
+        width: 32%;
+    }
+
+    /*Hobbies*/
+    .hobbies {
+        margin: 40px;
+    }
+
+    .hobbies__line {
+        gap: 0;
+    }
+
+    .hobbies__box {
+        height: 150px;
+        margin: 10px 0;
+        width: 32%;
+    }
+
+    /*Formación Académica*/
+    .academic {
+        padding: 20px 40px;
+    }
+
+    .academic__courses {
+        gap: 10px;
+    }
+
+    .academic__courses__item__img {
+        height: 200px;
+    }
+
+    /*Experiencia Profesional*/
+    .experience {
+        margin: 40px;
+    }
+
+    .experience__img {
+        width: 100%;
+    }
+
+    .experience__info {
+        margin: 20px 0 30px 0;
+    }
+
+    .experiencie__box:nth-of-type(2) .experience__info,
+    .experiencie__box:nth-of-type(4) .experience__info {
+        order: 1;/* Alinea a la derecha */
+
+    }
+
+    .experiencie__box:nth-of-type(2),
+    .experiencie__box:nth-of-type(4) {
+        justify-content: left;
+    }
+
+    /*Contacto*/
+    .formcontato__esquerda {
+        display: none;
+        margin: 1%;
+    }
+
+    .formcontato__text {
+        width: 90%;
+        padding-left: 0;
+    }
+
+
+}
+
+/*Mobile*/
+@media screen and (min-width: 424px) and (max-width:767px) {
+
+    /*Menu*/
+    .menu {
+        padding: 0 20px;
+    }
+
+    .menu__list__item:not(:first-child) {
+        display: none;
+    }
+
+    .menu__list__item:nth-child(7) {
+        font-weight: lighter;
+    }
+
+    /*Titulo*/
+    .title__div {
+        padding: 20px;
+        justify-content: left;
+    }
+
+    .title__container {
+        width: 100%;
+        order: 1;
+    }
+
+    .title__bio {
+        font-size: 2em;
+        margin-top: 20px;
+    }
+
+    .title__subsection {
+        font-size: 0.9em;
+        font-weight: lighter;
+    }
+
+    .title__network {
+        width: 100%;
+        padding: 0;
+        gap: 0;
+    }
+
+    /*Sección sobre mi*/
+    .about {
+        padding: 20px;
+    }
+
+    .about__container {
+        width: 100%;
+    }
+
+    /*Skills*/
+    .skills {
+        margin: 20px;
+    }
+
+    .skills__box {
+        height: 150px;
+        margin: 10px 0;
+        width: 48%;
+    }
+
+    /*Hobbies*/
+    .hobbies {
+        margin: 20px;
+    }
+
+    .hobbies__box {
+        height: 150px;
+        margin: 10px 0;
+        width: 48%;
+    }
+
+    /*Formación Académica*/
+    .academic {
+        padding: 20px;
+    }
+
+    .academic__title {
+        margin: 20px 0 40px;
+    }
+
+    .academic__courses__list {
+        margin: 0;
+    }
+
+    .academic__courses__item__title h4,
+    .academic__courses__item__subtitle p {
+        margin: 1.2%;
+    }
+
+    .academic__courses__item__img {
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    /*Experiencia Profesional*/
+    .experience {
+        margin: 30px 20px;
+    }
+
+    /* .experience__section__title {
+    margin: 5%;
+} */
+    .experience__img {
+        width: 100%;
+        margin: 20px 0 20px;
+    }
+
+    .experiencie__box:nth-of-type(2) .experience__info,
+    .experiencie__box:nth-of-type(4) .experience__info {
+        order: 1;
+        /* Alinea a la izquierda */
+
+    }
+
+    .experiencie__box:nth-of-type(2),
+    .experiencie__box:nth-of-type(4) {
+        justify-content: left;
+    }
+
+    /*Contacto*/
+    .formcontato__esquerda {
+        display: none;
+
+    }
+
+    .formcontato__text {
+        width: 90%;
+        padding-left: 0;
+    }
+
+    .formcontato__botao {
+        width: 50%;
+    }
+
+    /*Footer*/
+
+}

@@ -1,0 +1,38 @@
+ .title__div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 110px;
+    /* height: 80vh; */
+}
+
+.title__bio {
+    font-size: 4em;
+    margin-bottom: 10px;
+}
+
+.title__subsection {
+    font-size: 1.8em;
+}
+.title__container {
+    order: -1;
+    width: 70%;
+    
+}
+
+.title__profile {
+    width: 30%;
+}
+
+.title__network {
+    display: flex;
+     width: 45%;
+     justify-content: space-between;
+     padding: 0;
+}
+
+.title__network__item:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}

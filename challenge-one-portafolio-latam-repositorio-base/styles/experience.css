@@ -1,0 +1,77 @@
+.experience {
+    margin: 0 110px;
+}
+
+.experience__section__title {
+    text-align: center;
+    margin: 2%;
+}
+
+.experiencie__box {
+    display: flex;
+    gap: 2%;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 0 5% 0;
+}
+
+.experience__img {
+    width: 66.6%;
+}
+
+.experience__info {
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+}
+
+.experience__info h3 {
+    order: -1;
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* botones */
+.experience__description {
+    display: flex;
+    gap: 2.5%;
+    justify-content: space-between;
+}
+
+.experience__repo a {
+    padding: 0;
+}
+
+.experience__repo, .experience__demo {
+    width: 100%;
+    ;
+}
+
+.experience__repo button,
+.experience__demo button{
+    width: 100%;
+    
+    height: 50px
+}
+
+.experience__repo a button {
+    border: solid 2px rgba(227, 80, 190, 0.192);
+    color: rgba(146, 20, 114, 0.868);
+}
+
+.experience__demo a button {
+    background-color: rgba(227, 80, 190, 0.192);
+    color: rgba(49, 48, 48, 0.957);
+    border: none;
+}
+
+.experiencie__box:nth-of-type(2),
+.experiencie__box:nth-of-type(4) {
+    justify-content: end;
+}
+/* Selecciona el segundo y cuarto .experiencie__box */
+.experiencie__box:nth-of-type(2) .experience__info,
+.experiencie__box:nth-of-type(4) .experience__info {
+    order: -1; /* Alinea a la izquierda */
+}
